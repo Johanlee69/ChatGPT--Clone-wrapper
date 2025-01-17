@@ -23,8 +23,8 @@ function Main() {
             <div className='text_input bg-neutral-700 p-4 rounded-xl'>
                     <input type="text" placeholder='Message ChatGPT'  className='input_text bg-neutral-700 outline-none text-white'/>
                     <div className='flex justify-between mt-2'>
-                        <img src={assets.gallery_icon} alt="image" className='invert' width={30}/>
-                        <img src={assets.send_icon} alt="image" className='invert' width={30}/>
+                        <img src={assets.gallery_icon} alt="image" className='invert cursor-pointer' width={30}/>
+                        <img src={assets.send_icon} alt="image" className='invert cursor-pointer' width={30}/>
                     </div>
                 </div>
             </div>
