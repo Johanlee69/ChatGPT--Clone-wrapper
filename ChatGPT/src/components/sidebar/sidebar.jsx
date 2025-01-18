@@ -4,8 +4,8 @@ import { assets } from '../../assets/assets'
 
 const Sidebar = () => {
     return (
-        <div>
-            <div className='sidebar bg-zinc-900 h-screen text-white p-3'>
+        <div >
+            <div className='sticky top-0 sidebar bg-zinc-900 h-screen text-white p-3'>
                 <nav className='flex justify-between mb-1'>
                     <div className=' hover:bg-zinc-800 p-3 rounded-xl'>
                         <img src={assets.close_icon} alt="close" className='invert cursor-pointer' width={30} />
