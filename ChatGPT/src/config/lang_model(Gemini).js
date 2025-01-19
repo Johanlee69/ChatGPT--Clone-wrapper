@@ -3,7 +3,7 @@ import {
     HarmCategory,
     HarmBlockThreshold,
   }  from "@google/generative-ai";
-  
+  //   use your own API key to test the project from google
   const apiKey = "AIzaSyAkLd98wqj54ujz8XWXD_1m_uG7lhWHrOE"; 
   const genAI = new GoogleGenerativeAI(apiKey);
   
