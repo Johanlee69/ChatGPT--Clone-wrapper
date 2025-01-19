@@ -17,8 +17,20 @@ const ContextProvider = (props) => {
         setShowResult(true);
         setRecent(input)
         const resposne = await runCHAT(input);
-        setResult(resposne);
+        let newResArray = resposne.split("**");
+        let newResponse = [];
+        for(let i= 0; i < newResArray.length;i++){
+            if(i === 0 || i%2 !==1 ){
+                newResponse += newResArray[i];
+            }
+            else{
+                newResponse += "<b>" +newResArray[i]+ "</b>";
+            }
+        }
+        let FinalResponse = newResponse.split("*").join("</br></br>");
+        setResult(FinalResponse);
     }
+        
     const contextValue = {
         input,setinput,
         onSent,

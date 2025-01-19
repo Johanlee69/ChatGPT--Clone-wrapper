@@ -17,8 +17,7 @@ function Main() {
                 <div className='pl-80 text-white'>
                     <img src={assets.chatGPT_icon} width={"40px"} alt="chatgpt_icon" className='invert p-2 border border-slate-500 rounded-full' />
 
-                    <p className=' text-white mt-6 mb-8 overflow-auto w-3/4' >
-                        {Result}
+                    <p className=' text-white mt-6 mb-8 overflow-auto w-3/4' dangerouslySetInnerHTML={{ __html: Result }} >
                     </p>
                 </div>
             </div>
@@ -26,6 +25,13 @@ function Main() {
         setDivs(prevDivs => [...prevDivs, newDiv]);
 
     };
+    const handleInputKey = (event) => {
+        if (event.key === 'Enter') {
+            onSent();
+            if (ShowResult)
+                addPrevResponse();
+        }
+    }
 
     return (
         <div className='main bg-neutral-800'>
@@ -46,7 +52,7 @@ function Main() {
                             <div key={i}>{div}</div>
                         ))}
                         {/* stored the previous convo and generated the new resoponse after each update note: feels redandent try finding a better solution later*/}
-                    <div className='response_  '>
+                        <div className='response_  '>
                             <div className='flex justify-end'>
                                 <p className=' text-white  bg-neutral-700 p-5 rounded-3xl mr-80 overflow-auto max-w-xl break-words mb-10'>
                                     {Recent}
@@ -55,15 +61,14 @@ function Main() {
                             <div className='pl-80 text-white'>
                                 <img src={assets.chatGPT_icon} width={"40px"} alt="chatgpt_icon" className='invert p-2 border border-slate-500 rounded-full' />
 
-                                <p className=' text-white mt-6 mb-8 overflow-auto w-3/4' >
-                                    {Result}
+                                <p className=' text-white mt-6 mb-8 overflow-auto w-3/4' dangerouslySetInnerHTML={{ __html: Result }} >
                                 </p>
                             </div>
-                    </div>
+                        </div>
                     </div>
                     <div className='fixed bottom-0 flex justify-center w-5/6 mb-14 '>
                         <div className='text_input bg-neutral-700 p-4 rounded-xl'>
-                            <input type="text" placeholder='Message ChatGPT' onChange={(e) => setinput(e.target.value)} value={input} className='input_text bg-neutral-700 outline-none text-white' />
+                            <input type="text" placeholder='Message ChatGPT' onChange={(e) => setinput(e.target.value)} value={input} onKeyDown={handleInputKey} className='input_text bg-neutral-700 outline-none text-white' />
                             <div className='flex justify-between mt-2'>
                                 <img src={assets.gallery_icon} alt="image" className='invert cursor-pointer' width={30} />
                                 <img src={assets.send_icon} alt="sent" onClick={() => { onSent(); addPrevResponse(); }} className='invert cursor-pointer' width={30} />
@@ -80,7 +85,7 @@ function Main() {
                     </div>
                     <div className='flex justify-center gap-4 mt-6 '>
                         <div className='text_input bg-neutral-700 p-4 rounded-xl'>
-                            <input type="text" placeholder='Message ChatGPT' onChange={(e) => setinput(e.target.value)} value={input} className='input_text bg-neutral-700 outline-none text-white' />
+                            <input type="text" placeholder='Message ChatGPT' onKeyDown={handleInputKey} onChange={(e) => setinput(e.target.value)} value={input} className='input_text bg-neutral-700 outline-none text-white' />
                             <div className='flex justify-between mt-2'>
                                 <img src={assets.gallery_icon} alt="image" className='invert cursor-pointer' width={30} />
                                 <img src={assets.send_icon} alt="sent" onClick={() => onSent()} className='invert cursor-pointer' width={30} />
@@ -96,6 +101,7 @@ function Main() {
             </div>
         </div>
     )
+
 }
 
 export default Main
