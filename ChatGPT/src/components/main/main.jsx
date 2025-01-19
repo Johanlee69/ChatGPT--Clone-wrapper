@@ -51,7 +51,6 @@ function Main() {
                         {divs.map((div, i) => (
                             <div key={i}>{div}</div>
                         ))}
-                        {/* stored the previous convo and generated the new resoponse after each update note: feels redandent try finding a better solution later*/}
                         <div className='response_  '>
                             <div className='flex justify-end'>
                                 <p className=' text-white  bg-neutral-700 p-5 rounded-3xl mr-80 overflow-auto max-w-xl break-words mb-10'>

@@ -19,8 +19,8 @@ const ContextProvider = (props) => {
         const resposne = await runCHAT(input);
         let newResArray = resposne.split("**");
         let newResponse = [];
-        for(let i= 0; i < newResArray.length;i++){
-            if(i === 0 || i%2 !==1 ){
+        for(let i = 0; i < newResArray.length;i++){
+            if(i === 0 || i%2 !== 1 ){
                 newResponse += newResArray[i];
             }
             else{
