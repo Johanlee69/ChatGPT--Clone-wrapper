@@ -7,8 +7,6 @@ import bulb_icon from './bulb_icon.png'
 import compass_icon from './compass_icon.png'
 import gallery_icon from './gallery_icon.png'
 import mic_icon from './mic_icon.png'
-import user_icon from './user_icon.png'
-import youtube_icon from './youtube_icon.png'
 import message_icon from './message_icon.png'
 import code_icon from './code_icon.png'
 import send_icon from './send_icon.png'
@@ -18,7 +16,7 @@ import search_icon from './search.svg'
 import edit_icon from './edit.svg'
 import chatGPT_icon from './chatgptlogo.svg'
 import explore_icon from './explore.svg'
-
+import profile_icon from './profile_icon.png'
 export const assets = {
     history_icon,
     menu_icon,
@@ -29,8 +27,6 @@ export const assets = {
     compass_icon,
     gallery_icon,
     mic_icon,
-    user_icon,
-    youtube_icon,
     message_icon,
     code_icon,
     send_icon,
@@ -39,6 +35,7 @@ export const assets = {
     search_icon,
     edit_icon,
     chatGPT_icon,
-    explore_icon
+    explore_icon,
+    profile_icon
 
 }

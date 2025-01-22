@@ -46,7 +46,7 @@ function Main() {
                         </div>
                     </div>
                     <div className=' hover:bg-neutral-700 p-2 rounded-full cursor-pointer mr-3'>
-                        <img src={assets.user_icon} alt="user" width={50} className='rounded-full ' />
+                        <img src={assets.profile_icon} alt="user" width={50} className='rounded-full bg-white p-1' />
                     </div>
                 </nav>
                 <main>
