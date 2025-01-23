@@ -4,7 +4,7 @@ will make local data save and account later
 for now I've stopped this projcet 
 
 Next goals
-  fix the responsive desgin for all device 
-  add local data save and server fetch, instead of hard coding 
-  progame all the buttons as they are supposed to be 
+  fix the responsive desgin for all device,
+  add local data save and server fetch, instead of hard coding ,
+  progame all the buttons as they are supposed to be ,
   and add login feature 
